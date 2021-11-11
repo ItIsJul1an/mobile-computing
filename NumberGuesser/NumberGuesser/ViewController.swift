@@ -11,9 +11,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var textView: UILabel!
+    @IBOutlet weak var button: UIButton!
     
-    @IBOutlet weak var button: UITextField!
-    // let target: Int = Int.random(in: 0...100)
     var model = Model()
     
     override func viewDidLoad() {
@@ -24,7 +23,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func onEditingChanged(_ sender: Any) {
-        self.button.isEnabled = true
+        if self.inputField.text == ""{
+            self.button.isEnabled = false
+        } else {
+            self.button.isEnabled = true
+        }
     }
     
     @IBAction func onCheckButtonClicked(_ sender: Any) {
@@ -35,16 +38,15 @@ class ViewController: UIViewController {
         if let guess = Int(self.inputField.text!) {
             switch compareTo() {
                 case -1:
-                    response = "kleiner"
+                    response = "Zahl ist kleiner"
                 case 1:
-                    response = "größer"
+                    response = "Zahl ist gößer"
                 default:
                     response = ""
             }
         }
         
         textView.text = response
-        
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

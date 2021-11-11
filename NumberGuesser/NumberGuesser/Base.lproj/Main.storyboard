@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kf2-oT-G3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="100"/>
+            <point key="canvasLocation" x="904" y="100"/>
         </scene>
         <!--Game-->
         <scene sceneID="tne-QT-ifu">
@@ -69,14 +69,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Game" id="qer-H0-RgQ"/>
                     <connections>
-                        <outlet property="button" destination="H33-l7-7g1" id="1hq-zm-gOO"/>
+                        <outlet property="button" destination="fot-M0-HeM" id="TRd-fn-sTy"/>
                         <outlet property="inputField" destination="H33-l7-7g1" id="OI0-gF-AdP"/>
                         <outlet property="textView" destination="HtP-eX-GXC" id="sP8-xM-hmw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="100"/>
+            <point key="canvasLocation" x="106" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jmr-sB-txD">
