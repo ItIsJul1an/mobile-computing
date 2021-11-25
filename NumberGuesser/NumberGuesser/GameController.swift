@@ -31,7 +31,6 @@ class GameController: UIViewController {
     }
     
     @IBAction func onCheckButtonClicked(_ sender: Any) {
-        
         // update attempts
         self.model.attempts += 1
         self.attemptsLable.text = "\(self.model.attempts + 1). Versuch"
@@ -41,7 +40,6 @@ class GameController: UIViewController {
             let diff = self.model.compare(guess: guess)
             textView.text = "Die Zahl ist \((diff > 0) ? "größer": (diff < 0) ? "kleiner" : "richtig")!"
         }
-        
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -55,11 +53,8 @@ class GameController: UIViewController {
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController = segue.destination as? ResultViewController
-        //as? -- Typecast
         if let vc = resultViewController {
             vc.model = model
         }
     }
-    
-    
 }
